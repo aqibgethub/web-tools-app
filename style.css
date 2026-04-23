@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #111;
+  padding: 20px;
+}
+
+/* =========================
+   TOOL BUTTONS
+========================= */
+.tool-buttons {
+  margin: 20px;
+}
+
+.tool-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff3c00;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tool-buttons button:hover {
+  background: #e63300;
+  transform: scale(1.05);
+}
+
+/* ACTIVE BUTTON */
+.tool-buttons button.active {
+  background: #00c853;
+  transform: scale(1.05);
+}
+
+/* =========================
+   TOOL CONTAINER
+========================= */
+.tool-container {
+  padding: 20px;
+}
+
+/* =========================
+   TOOL BOX
+========================= */
+.tool {
+  display: none;
+  background: #222;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  animation: fade 0.3s ease-in;
+}
+
+.tool.active {
+  display: block;
+}
+
+/* FADE ANIMATION */
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* =========================
+   INPUTS
+========================= */
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   BUTTONS (GLOBAL)
+========================= */
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  background: #ff3c00;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e63300;
+}
+
+/* =========================
+   TEXT
+========================= */
+p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* TOOL TITLE */
+.tool h2 {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+body.light {
+  background: #f2f2f2;
+  color: #111;
+}
+
+body.light header {
+  background: #ffffff;
+}
+
+body.light .tool {
+  background: #ffffff;
+  color: #111;
+}
+
+/* LIGHT MODE BUTTONS */
+body.light .tool-buttons button,
+body.light .tool button {
+  background: #333;
+  color: white;
+}

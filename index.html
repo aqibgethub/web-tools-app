@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Tool Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Multi Tool Website</h1>
+    </header>
+    <!-- Tool Buttons -->
+     <div class="tool-buttons">
+        <button onclick="showTool('age')">Age Calculator</button>
+        <button onclick="showTool('password')">Password Generator</button>
+        <button onclick="showTool('bmi')">BMI Calculator</button>
+        <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+     </div>
+     <!-- TOOL AREA -->
+     <div class="tool-container">
+
+  <!-- AGE TOOL -->
+  <div id="age" class="tool">
+    <h2>Age Calculator</h2>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate</button>
+    <p id="age-result"></p>
+  </div>
+
+  <!-- PASSWORD -->
+  <div id="password" class="tool">
+    <h2>Password Generator</h2>
+
+    <label>Password Length: <span id="lengthValue">10</span></label>
+    <input type="range" id="length" min="6" max="20" value="10" oninput="updateLength(this.value)">
+
+    <button onclick="generatePassword()">Generate</button>
+    <button onclick="copyPassword()">Copy</button>
+    <button onclick="resetPassword()">Reset</button>
+
+    <p id="password-result"></p>
+  </div>
+<!-- BMI TOOL -->
+<div id="bmi" class="tool">
+  <h2>BMI Calculator</h2>
+
+  <input type="number" id="weight" placeholder="Weight (kg)">
+  <input type="number" id="height" placeholder="Height (cm)">
+
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <button onclick="resetBMI()">Reset</button>
+
+  <p id="bmi-result"></p>
+</div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
